@@ -27,17 +27,6 @@ if ($result > "0") {
     echo "Ooops.<br>";
 }
 
-echo "<br>#4<br>";
-$lastPos = 0;
-$positions = array();
-while (($lastPos = strpos($date, "-", $lastPos))!== false) {
-    $positions[] = $lastPos;
-    $lastPos = $lastPos + strlen("-");
-}
-foreach ($positions as $value) {
-    echo "position: " . $value ."<br>";
-    $dateOriginal[$value] = " ";
-}
 
 echo "<br>#5<br>";
 $dateLength = array();
@@ -54,14 +43,6 @@ echo "ASCII of 1st character in \$date: " . ord($date[0]) . "<br>";
 echo "<br>#8<br>";
 $part = substr($date, 8, 2);
 echo "The last two characters in \$date are: " . $part . "<br>";
-
-echo "<br>#9<br>";
-$dateNewArr = array();
-$dateNewArr = explode('/', $date);
-foreach ($dateNewArr as $i) 
-    echo $i . " ";
-
-echo "<br>";
 
 
 
