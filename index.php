@@ -18,9 +18,14 @@ $date = str_replace('-', '/', $date);
 echo $date . " is the new formatted date.<br>";
 
 echo "<br>#3<br>";
-if ($date > $tar) echo "The Future <br>";
-elseif ($date < $tar) echo "The Past <br>";
-else echo "Oops <br>";
+$result = strnatcasecmp($date, $tar);
+if ($result > "0") {
+    echo "The future<br>";
+}    elseif ($result < "0") {
+    echo "The past<br>";
+}    elseif ($result = "0") {
+    echo "Ooops.<br>";
+}
 
 echo "<br>#4<br>";
 $lastPos = 0;
